@@ -21,4 +21,14 @@ contract VolcanoToken is ERC721, Ownable {
         
     }
     
+    function mintToken(address to, uint256 tokenId) public {
+        _mint(to, tokenId);
+         tokenOwnership[to].push(TokenMetaData(tokenId, block.timestamp, "http://newToken1"));
+         tokenId += 1;
+    }
+
+    function burnToken(uint256 tokenId) public {
+        require(msg.sender == ownerOf(tokenId), "You do not own this token. You're unauthorized");
+        _burn(tokenId);
+    }
 }
