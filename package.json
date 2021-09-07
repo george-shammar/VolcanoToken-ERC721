@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/george-shammar/VolcanoToken-ERC721/issues"
   },
-  "homepage": "https://github.com/george-shammar/VolcanoToken-ERC721#readme"
+  "homepage": "https://github.com/george-shammar/VolcanoToken-ERC721#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.1"
+  }
 }
